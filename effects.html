@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamer Mode</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <h1>Gamer Mode</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="effects.html">Gamer Mode</a>
+        </nav>
+    </header>
+    <section class="gamer-mode">
+        <h2>Activate Gamer Mode</h2>
+        <button onclick="toggleGamerMode()">Toggle Gamer Mode</button>
+        <p id="modeStatus">Gamer Mode: OFF</p>
+    </section>
+    <section class="reaction">
+        <h2>Reaction Time Test</h2>
+        <button onclick="startReactionTest()">Start Test</button>
+        <button id="reactionButton" onclick="recordReaction()" hidden>CLICK!</button>
+        <p id="reactionResult"></p>
+    </section>
+    <section class="effects">
+        <h2>Possible Side Effects</h2>
+        <button onclick="generateEffect()">Show Side Effect</button>
+        <p id="effectText"></p>
+    </section>
+    <footer>
+        <p>Ultra Pro Gamer Labs™</p>
+    </footer>
+    <script src="effects.js"></script>
+</body>
+
+</html>

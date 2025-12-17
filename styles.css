@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-dark: #0b0f1a;
+    --bg-light: #151a2e;
+    --neon-pink: #ff2fdc;
+    --neon-blue: #2de2ff;
+    --neon-green: #3cff9e;
+    --text-main: #ffffff;
+    --text-muted: #b5b5b5;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(135deg, var(--bg-dark), var(--bg-light));
+    color: var(--text-main);
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(6px);
+}
+
+.header h1 {
+    font-size: 1.5rem;
+    color: var(--neon-blue);
+}
+
+.header nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: var(--text-main);
+    transition: color 0.3s;
+}
+
+.header nav a:hover {
+    color: var(--neon-pink);
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px var(--neon-pink);
+}
+
+.hero img {
+    width: 220px;
+    margin-top: 20px;
+    filter: drop-shadow(0 0 20px var(--neon-blue));
+    transition: transform 0.3s;
+}
+
+.hero img:hover {
+    transform: scale(1.1) rotate(-2deg);
+}
+
+section {
+    margin: 40px auto;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+}
+
+section h2,
+section h3 {
+    margin-bottom: 20px;
+    color: var(--neon-green);
+}
+
+.flavors button {
+    margin: 10px;
+    padding: 12px 20px;
+    background: transparent;
+    border: 2px solid var(--neon-pink);
+    color: var(--text-main);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.flavors button:hover {
+    background: var(--neon-pink);
+    box-shadow: 0 0 15px var(--neon-pink);
+}
+
+#selectedFlavor {
+    margin-top: 15px;
+    color: var(--text-muted);
+}
+
+.fps input[type="range"] {
+    width: 100%;
+    margin: 15px 0;
+}
+
+#fpsValue {
+    color: var(--neon-blue);
+    font-weight: bold;
+}
+
+.buy {
+    text-align: center;
+}
+
+.buy button {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    background: linear-gradient(45deg, var(--neon-pink), var(--neon-blue));
+    border: none;
+    color: black;
+    border-radius: 40px;
+    cursor: pointer;
+    box-shadow: 0 0 25px var(--neon-pink);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.buy button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 40px var(--neon-blue);
+}
+
+.gamer-mode button {
+    padding: 12px 30px;
+    background: transparent;
+    border: 2px solid var(--neon-green);
+    color: var(--text-main);
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+#modeStatus {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.reaction button {
+    margin: 10px 0;
+    padding: 12px 25px;
+    background: var(--neon-blue);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    color: black;
+}
+
+.effects p {
+    margin-top: 15px;
+    font-style: italic;
+    color: var(--neon-pink);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-muted);
+}
+
+body.gamer-active {
+    background: radial-gradient(circle at top, #000000, #020412);
+}
+
+body.gamer-active section {
+    box-shadow: 0 0 40px var(--neon-green);
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 10px var(--neon-pink);
+    }
+
+    50% {
+        box-shadow: 0 0 25px var(--neon-blue);
+    }
+
+    100% {
+        box-shadow: 0 0 10px var(--neon-pink);
+    }
+}
+
+.buy button {
+    animation: pulse 2s infinite;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultra Pro Gamer Energy Drink</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <h1>Ultra Pro Gamer Energy Drink</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="effects.html">Gamer Mode</a>
+        </nav>
+    </header>
+    <section class="hero">
+        <h2>+200 FPS. +100 IQ. 0% Sleep.</h2>
+        <img src="pics/rgbBerry.png" alt="Ultra Pro Gamer Energy Drink doboz">
+    </section>
+    <section class="flavors">
+        <h3>Choose your flavor</h3>
+        <button onclick="selectFlavor('RGB Berry')">RGB Berry</button>
+        <button onclick="selectFlavor('Code Cola')">Code Cola</button>
+        <button onclick="selectFlavor('404 Cherry')">404 Cherry</button>
+
+        <p id="selectedFlavor">No flavor selected</p>
+    </section>
+    <section class="fps">
+        <h3>FPS Booster</h3>
+        <label for="cans">How many cans did you drink?</label>
+        <input type="range" id="cans" min="0" max="10" value="0" oninput="updateFPS()">
+
+        <p>Your FPS: <span id="fpsValue">60</span></p>
+    </section>
+    <section class="buy">
+        <button onclick="buyDrink()">BUY NOW</button>
+    </section>
+    <footer>
+        <p>⚠️ Not approved by doctors. Approved by gamers.</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+
+</html>
