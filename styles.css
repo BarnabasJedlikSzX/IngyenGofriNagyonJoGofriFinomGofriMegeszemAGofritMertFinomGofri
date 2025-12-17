@@ -107,16 +107,6 @@ section h3 {
     color: var(--text-muted);
 }
 
-.fps input[type="range"] {
-    width: 100%;
-    margin: 15px 0;
-}
-
-#fpsValue {
-    color: var(--neon-blue);
-    font-weight: bold;
-}
-
 .buy {
     text-align: center;
 }
@@ -138,7 +128,7 @@ section h3 {
     box-shadow: 0 0 40px var(--neon-blue);
 }
 
-.gamer-mode button {
+button {
     padding: 12px 30px;
     background: transparent;
     border: 2px solid var(--neon-green);
@@ -150,16 +140,6 @@ section h3 {
 #modeStatus {
     margin-top: 15px;
     font-weight: bold;
-}
-
-.reaction button {
-    margin: 10px 0;
-    padding: 12px 25px;
-    background: var(--neon-blue);
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    color: black;
 }
 
 .effects p {

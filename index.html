@@ -20,22 +20,15 @@
     </header>
     <section class="hero">
         <h2>+200 FPS. +100 IQ. 0% Sleep.</h2>
-        <img src="pics/rgbBerry.png" alt="Ultra Pro Gamer Energy Drink doboz">
+        <img src="pics/rgbBerry.png" alt="Ultra Pro Gamer Energy Drink doboz" id="heroPicture">
     </section>
     <section class="flavors">
         <h3>Choose your flavor</h3>
-        <button onclick="selectFlavor('RGB Berry')">RGB Berry</button>
-        <button onclick="selectFlavor('Code Cola')">Code Cola</button>
-        <button onclick="selectFlavor('404 Cherry')">404 Cherry</button>
+        <button onclick="selectFlavor('rgbBerry')">RGB Berry</button>
+        <button onclick="selectFlavor('codeCola')">Code Cola</button>
+        <button onclick="selectFlavor('404Cherry')">404 Cherry</button>
 
         <p id="selectedFlavor">No flavor selected</p>
-    </section>
-    <section class="fps">
-        <h3>FPS Booster</h3>
-        <label for="cans">How many cans did you drink?</label>
-        <input type="range" id="cans" min="0" max="10" value="0" oninput="updateFPS()">
-
-        <p>Your FPS: <span id="fpsValue">60</span></p>
     </section>
     <section class="buy">
         <button onclick="buyDrink()">BUY NOW</button>
